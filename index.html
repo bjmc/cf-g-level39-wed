@@ -14,10 +14,11 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+    <!-- Lightbox plugin: https://ashleydw.github.io/lightbox/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.css" integrity="sha256-8aNQFtmxcOMVoOhLD4mrHqaKC2Ui++LmlQsoKTqxwIE=" crossorigin="anonymous">
+
     <!-- Custom CSS -->
     <link href="custom-styles.css" rel="stylesheet">
-
-
 
 </head>
 
@@ -42,7 +43,9 @@
         <div class="card-columns">
 
             <div class="card">
-                <img class="card-img-top img-fluid" src="img/rom1.jpg" alt="Romulus">
+                <a href="img/rom1.jpg" data-toggle="lightbox">
+                    <img class="card-img-top img-fluid" src="img/rom1.jpg" alt="Romulus">
+                </a>
                 <div class="card-block">
                     <h4 class="card-title">Romulus</h4>
                     <p class="card-text">Rom trying to nap.</p>
@@ -50,7 +53,9 @@
             </div>
 
             <div class="card">
-                <img class="card-img-top img-fluid" src="img/bailey_xmas.jpg" alt="Bailey">
+                <a href="img/bailey_xmas.jpg" data-toggle="lightbox">
+                    <img class="card-img-top img-fluid" src="img/bailey_xmas.jpg" alt="Bailey">
+                </a>
                 <div class="card-block">
                     <h4 class="card-title">Bailey</h4>
                     <p class="card-text">Bailey feeling festive under the Christmas tree.</p>
@@ -58,14 +63,18 @@
             </div>
 
             <div class="card">
-                <img class="card-img-top img-fluid" src="img/rom2.jpg" alt="Romulus">
+                <a href="img/rom2.jpg" data-toggle="lightbox">
+                    <img class="card-img-top img-fluid" src="img/rom2.jpg" alt="Romulus">
+                </a>
                 <div class="card-block">
                     <h4 class="card-title">Romulus</h4>
                     <p>Rom is excited for his turn in the bed by the tree.</p>
                 </div>
             </div>
             <div class="card">
-                <img class="card-img-top img-fluid" src="img/ThanksgivingBailey.jpg" alt="Bailey">
+                <a href="img/ThanksgivingBailey.jpg" data-toggle="lightbox">
+                    <img class="card-img-top img-fluid" src="img/ThanksgivingBailey.jpg" alt="Bailey">
+                </a>
                 <div class="card-block">
                   <h4 class="card-title">Bailey</h4>
                   <p class="card-text">Bailey getting in the Thanksgiving spirit.</p>
@@ -133,6 +142,16 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- lightbox  https://ashleydw.github.io/lightbox/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.1.1/ekko-lightbox.min.js" integrity="sha256-1odJPEl+KoMUaA1T7QNMGSSU/r5LCKCRC6SL8P0r2gY=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
 
 </body>
 
